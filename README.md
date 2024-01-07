@@ -8,7 +8,7 @@ I've tried to keep things simple as much possible for simplicity!
 This website made using,
 
 1. <b>`HTML`</b> 
-2. <b>`chart.js`</b>
+2. <b>`chart.js` CDN</b>
 
 
 # Note from Owner
