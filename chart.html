@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+  <canvas id="myChart"></canvas>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js" integrity="sha512-M7nHCiNUOwFt6Us3r8alutZLm9qMt4s9951uo8jqO4UwJ1hziseL6O3ndFyigx6+LREfZqnhHxYjKRJ8ZQ69DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Your HTML and script tags here -->
+
+<script>
+    const data = "data.csv";
+    const ctx = document.getElementById('myChart');
+    d3.csv(data).then(function(datapoints) {
+        const labels = [];
+        const downloadCounts = [];
+        const backgroundColors = [];
+
+        for (let i = 0; i < datapoints.length; i++) {
+            labels.push(datapoints[i].AppDownloadDate);
+            downloadCounts.push(datapoints[i].DownloadCount);
+            backgroundColors.push(i % 2 === 0 ? 'rgba(0, 80, 0, 0.7)' : 'rgba(0, 250, 0, 1.0)');
+        }
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Download Count',
+                    data: downloadCounts,
+                    borderWidth: 1,
+                    backgroundColor: backgroundColors,
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 300 // Set the maximum value for the y-axis
+                    }
+                }
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
+<!-- comment --> 
