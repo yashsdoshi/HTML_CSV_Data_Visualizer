@@ -3,6 +3,10 @@
 
 <hr />
 
+# Live Preview 👉 [here](https://yashsdoshi.github.io/HTML_CSV_Data_Visualizer/)
+
+<hr />
+
 I've tried to keep things simple as much possible for simplicity!
 
 This website made using,
