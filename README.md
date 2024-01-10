@@ -3,7 +3,7 @@
 
 <hr />
 
-# Live Preview 👉 [here](https://yashsdoshi.github.io/HTML_CSV_Data_Visualizer/)
+# Live Preview 👉 [here](https://yashsdoshi.github.io/HTML_CSV_Data_Visualizer_Using_Chart.JS/) 
 
 <hr />
 
